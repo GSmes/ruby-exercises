@@ -14,15 +14,15 @@ class HashDefaultTest < Minitest::Homework
     assert_equal expected, {}
 
     # This one fails. Fix it.
-    assert_equal {}, Hash.new
+    assert_equal({}, Hash.new)
   end
 
   def test_default_array_as_argument
     lists = Hash.new([])
 
-    assert_equal __, lists
-    assert_equal __, lists[:a]
-    assert_equal __, lists[:b]
+    assert_equal({}, lists)
+    assert_equal([], lists[:a])
+    assert_equal([], lists[:b])
     maybe lists[:a].object_id == lists[:b].object_id
   end
 
